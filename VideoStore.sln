@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoStore.Common", "VideoStore.Common\VideoStore.Common.csproj", "{6EBB54BA-4FDD-4D09-BFBA-C9E123C6CA11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoStore.Tests", "VideoStore.Tests\VideoStore.Tests.csproj", "{007754C6-1D0D-466C-B7DC-CEFFDE409C68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoStore.Client", "VideoStore.Client\VideoStore.Client.csproj", "{7ADF1C85-B7A7-431A-9F1F-A85D1B47340A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EBB54BA-4FDD-4D09-BFBA-C9E123C6CA11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EBB54BA-4FDD-4D09-BFBA-C9E123C6CA11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EBB54BA-4FDD-4D09-BFBA-C9E123C6CA11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EBB54BA-4FDD-4D09-BFBA-C9E123C6CA11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{007754C6-1D0D-466C-B7DC-CEFFDE409C68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{007754C6-1D0D-466C-B7DC-CEFFDE409C68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{007754C6-1D0D-466C-B7DC-CEFFDE409C68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{007754C6-1D0D-466C-B7DC-CEFFDE409C68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ADF1C85-B7A7-431A-9F1F-A85D1B47340A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ADF1C85-B7A7-431A-9F1F-A85D1B47340A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ADF1C85-B7A7-431A-9F1F-A85D1B47340A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ADF1C85-B7A7-431A-9F1F-A85D1B47340A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
