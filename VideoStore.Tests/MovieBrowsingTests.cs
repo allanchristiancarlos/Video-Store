@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VideoStore.Common.Contracts;
 using VideoStore.Common.Extensions;
 using VideoStore.Common.Repositories;
+using VideoStore.Client;
 
 namespace VideoStore.Tests
 {
@@ -41,6 +42,16 @@ namespace VideoStore.Tests
             var movie = _repository.GetMovies().FirstOrDefault();
 
             Assert.AreEqual(1, movie?.Actors.Count);
+        }
+
+        [TestMethod]
+        public void Should_get()
+        {
+            VideoStoreContext db = new VideoStoreContext();
+
+            
+
+            Assert.IsTrue(db.Movies.Any());
         }
     }
 }

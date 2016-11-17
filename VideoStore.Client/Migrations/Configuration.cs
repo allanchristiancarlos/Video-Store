@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using VideoStore.Common.Models;
+
 namespace VideoStore.Client.Migrations
 {
     using System;
@@ -26,6 +29,87 @@ namespace VideoStore.Client.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            context.Movies.AddOrUpdate(
+                m => m.Title,
+                new Movie()
+                {
+                    Title = "Fast and Furious",
+                    Actors = new List<Actor>()
+                    {
+                        new Actor()
+                        {
+                            FirstName = "Vin",
+                            LastName = "Diesel"
+                        },
+                        
+                        new Actor()
+                        {
+                            FirstName = "Paul",
+                            LastName = "Walker"
+                        }
+                    },
+                    Genre = new Genre()
+                    {
+                        Title = "Action"
+                    },
+
+                    Dvds = new List<Dvd>()
+                    {
+                        new Dvd()
+                        {
+                            IsAvailable = true,
+                        },
+                        new Dvd()
+                        {
+                            IsAvailable = true
+                        },
+                        new Dvd()
+                        {
+                            IsAvailable = false
+                        }
+                    }
+                },
+
+                new Movie()
+                {
+                    Title = "Fantastic Beasts and Where to Find",
+                    Actors = new List<Actor>()
+                    {
+                        new Actor()
+                        {
+                            FirstName = "Eddie",
+                            LastName = "Redmayne"
+                        },
+
+                        new Actor()
+                        {
+                            FirstName = "Johnny",
+                            LastName = "Depp"
+                        }
+                    },
+                    Genre = new Genre()
+                    {
+                        Title = "Drama"
+                    },
+
+                    Dvds = new List<Dvd>()
+                    {
+                        new Dvd()
+                        {
+                            IsAvailable = true,
+                        },
+                        new Dvd()
+                        {
+                            IsAvailable = true
+                        },
+                        new Dvd()
+                        {
+                            IsAvailable = false
+                        }
+                    }
+                }
+            );
         }
     }
 }
