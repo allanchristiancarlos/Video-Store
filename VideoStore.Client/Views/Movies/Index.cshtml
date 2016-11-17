@@ -1,0 +1,23 @@
+﻿@using VideoStore.Common.Models;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    IEnumerable<Movie> movies = (IEnumerable<Movie>)ViewBag.Movies;
+}
+
+<h2>Movies</h2> 
+
+<div class="row">
+
+    @foreach (var movie in movies)
+    {
+        <div class="col-sm-3">
+            <h3><a href="/Movies/View/@movie.MovieId">@movie.Title</a></h3>
+            <p><span class="label label-warning"><a href="/Genres/View/@movie.Genre.GenreId">@movie.Genre.Title</a></span></p>
+            <p><a href="#" class="btn btn-success btn-sm">Add to Bag</a></p>
+        </div>
+    }
+
+</div>
+
+

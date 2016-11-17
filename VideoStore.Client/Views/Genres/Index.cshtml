@@ -1,0 +1,20 @@
+﻿@using VideoStore.Common.Models;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    IEnumerable<Genre> genres = (IEnumerable<Genre>) ViewBag.Genres;
+}
+
+<div class="page-header">
+    <h2>Genres</h2>
+</div>
+
+<div class="row">
+
+    @foreach (var genre in genres)
+    {
+        <div class="col-sm-3">
+            <h3><a href="/Genres/View/@genre.GenreId">@genre.Title</a></h3>
+        </div>
+    }
+</div>

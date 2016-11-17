@@ -1,0 +1,19 @@
+﻿@using VideoStore.Common.Models
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    IEnumerable<Actor> actors = (IEnumerable<Actor>)ViewBag.Actors;
+}
+
+<div class="page-header">
+    <h2>Actors</h2>
+</div>
+
+<div class="row">
+
+    @foreach (var actor in actors)
+    {
+        <div class="col-sm-3">
+            <h3><a href="/Actors/View/@actor.ActorId">@actor.FirstName @actor.LastName</a></h3>
+        </div>
+    }
+</div>

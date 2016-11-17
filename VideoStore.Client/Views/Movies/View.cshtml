@@ -1,0 +1,34 @@
+﻿@using System.Collections
+@using VideoStore.Common.Models;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Movie movie = (Movie)ViewBag.Movie;
+    IEnumerable<Actor> actors = (IEnumerable<Actor>)ViewBag.Actors;
+}
+
+<div class="page-header">
+    <h2>@movie.Title <br/><small><a href="/Movies">Back to movies</a></small></h2>
+</div>
+
+<div class="row">
+
+    <div class="col-sm-3">
+        <h3>Available</h3>
+        <p>
+            <strong>@movie.AvailableDvdsCount</strong>
+        </p>
+        <p><a class="btn btn-success">Add to bag</a></p>
+    </div>
+    <div class="col-sm-9">
+        <h3>Actors</h3>
+        <ul class="list-unstyled">
+            @foreach (var actor in actors)
+            {
+                <li><a href="/Actors/View/@actor.ActorId">@actor.FirstName @actor.LastName</li>
+            }
+        </ul>
+        
+        
+    </div>
+</div>

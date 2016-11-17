@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace VideoStore.Common.Models
 {
@@ -13,5 +14,13 @@ namespace VideoStore.Common.Models
         public Genre Genre { get; set; }
         public virtual ICollection<Actor> Actors { get; set; }
         public virtual ICollection<Dvd> Dvds { get; set; }
+
+        public virtual int AvailableDvdsCount
+        {
+            get
+            {
+                return this.Dvds.Count(d => d.IsAvailable);
+            }
+        }
     }
 }
